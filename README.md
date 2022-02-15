@@ -3,6 +3,7 @@
 * This project contains a form to add the tasks and a table which displays the list of tasks.
 * Task form is created using Template driven forms which includes data binding and validation.
 * Task list component is created using Material Table which includes pagination, sorting and delete action.
+![image](https://user-images.githubusercontent.com/43133633/154006501-b024f1cc-a050-4d94-b0fd-857e8a0c2c47.png)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
