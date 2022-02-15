@@ -1,4 +1,9 @@
-# THOUGHTiExercise
+# Task Form and Task List
+
+* This project contains a form to add the tasks and a table which displays the list of tasks.
+* Task form is created using Template driven forms which includes data binding and validation.
+* Task list component is created using Material Table which includes pagination, sorting and delete action.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
