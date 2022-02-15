@@ -1,0 +1,45 @@
+ <table mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="task">
+  <th mat-header-cell *matHeaderCellDef>Task</th>
+  <td mat-cell *matCellDef="let element">{{element.Task}}</td>
+</ng-container>
+
+<ng-container matColumnDef="expiryDate">
+  <th mat-header-cell *matHeaderCellDef>Expiry_date</th>
+  <td mat-cell *matCellDef="let element">{{element.Expiry_date}}</td>
+</ng-container>
+
+<ng-container matColumnDef="users">
+  <th mat-header-cell *matHeaderCellDef>Users</th>
+  <td mat-cell *matCellDef="let element">
+    <select [(ngModel)]="element.User" [value]="element.User" >
+      <option value="null">Select</option>
+      <option *ngFor="let user of users">{{user}}</option>
+    </select>
+  </td>
+</ng-container>
+
+<ng-container matColumnDef="important">
+  <th mat-header-cell *matHeaderCellDef>Important</th>
+  <td mat-cell *matCellDef="let element">
+    <ng-container *ngIf="element.Important">
+      <mat-icon>flag</mat-icon>
+    </ng-container>
+    <ng-container *ngIf="!element.Important">
+      <mat-icon>outlined_flag</mat-icon>
+    </ng-container>
+  </td>
+</ng-container>
+
+<ng-container matColumnDef="action">
+  <th mat-header-cell *matHeaderCellDef>Action</th>
+  <td mat-cell *matCellDef="let element;let i=index">
+    <button mat-icon-button (click)="onClick(i)">
+      <mat-icon>remove_circle_outline</mat-icon>
+    </button>
+  </td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row;columns:displayedColumns;"></tr>
+</table>

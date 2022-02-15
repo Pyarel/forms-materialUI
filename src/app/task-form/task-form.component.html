@@ -1,0 +1,34 @@
+<form (submit)="f.form.valid && onSubmit(f)" #f="ngForm">
+  <div class="form-control">
+    <label>Task </label>
+    <input type="text" [(ngModel)]="Task" name="Task" #task="ngModel" placeholder="Task Description" [ngClass]="{ 'is-invalid': f.submitted && task.invalid }" required>
+    <ng-container *ngIf="f.submitted && task.invalid">
+      <span *ngIf="task.errors.required" style="color: red;">Task is required</span>
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label>Expiry Date</label>
+    <input type="date"  [(ngModel)]="Expiry_date" #date="ngModel" name="Expiry_date" [ngClass]="{ 'is-invalid': f.submitted && date.invalid }"  required>
+    <ng-container *ngIf="f.submitted && date.invalid">
+      <span *ngIf="date.errors.required" style="color: red;">Date is required</span>
+    </ng-container>
+  </div>
+  <div class="form-control" >
+    <label>Users</label>
+    <select style="border: 2px solid black;" [(ngModel)]="User" #user="ngModel" [ngClass]="{ 'is-invalid': f.submitted && user.invalid }"  name="User" required>
+      <option value="null">Select</option>
+      <option *ngFor="let user of users">{{user}}</option>
+    </select>
+    <ng-container *ngIf="f.submitted && user.invalid">
+      <span *ngIf="user.errors.required" style="color: red;">User is required</span>
+    </ng-container>
+
+  </div>
+  <div class="form-control">
+    <label class="ilabel">Important</label>
+    <button mat-icon-button (click)="onClick(flagName)" type="button" ><mat-icon>{{flagName}}</mat-icon></button>
+  </div>
+  <div class="form-control">
+    <button type="submit" id="submit">Submit</button>
+  </div>
+</form>

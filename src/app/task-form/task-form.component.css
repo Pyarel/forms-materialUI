@@ -1,0 +1,65 @@
+form{
+  width: 100%;
+}
+div{
+  display: inline-block;
+  padding: 15px;
+  }
+  div select input {
+    display: block;
+    position: relative;
+    top: -3em;
+    padding: 10px;
+
+
+    }
+
+    div input {  padding: 5px; width: 200px;border-color: black;}
+    div label {
+      display: block;
+      position: relative;
+      top:6em;
+      text-align: left;
+      left:30px
+      }
+
+  input{
+    height: 20px;
+    margin: 20px;
+  }
+  select{
+    width: 200px;
+    height: 35px;
+    margin: 20px;
+    padding: 5px 0 0px;
+  }
+  button{
+    border: none;
+    background: transparent;
+    margin-left: 20px;
+}
+#submit{
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+
+}
+div .ilabel{
+    display: block;
+      position: relative;
+      top:4.5em;
+      text-align: left;
+      left:10px
+}
+.is-invalid{
+
+  border-color: red !important;
+
+
+}

@@ -1,0 +1,30 @@
+{
+  "Users": [
+  "User-1",
+  "User-2",
+  "User-3"
+  ],
+  "Tasks": [
+  {
+  "Task": "Sample task -1",
+  "Expiry_date": "10/21/2022",
+  "User": "User-1",
+  "Important": true,
+  "Created_on": "01/10/2022"
+  },
+  {
+  "Task": "Sample task -2",
+  "Expiry_date": "03/03/2022",
+  "User": "User-2",
+  "Important": false,
+  "Created_on": "01/10/2022"
+  },
+  {
+  "Task": "Sample task -3",
+  "Expiry_date": "05/30/2022",
+  "User": "User-2",
+  "Important": true,
+  "Created_on": "01/10/2022"
+  }
+  ]
+}
