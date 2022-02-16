@@ -1,4 +1,4 @@
-# Task Form and Task List
+# Task Form and Task List in Angular
 
 * This project contains a form to add the tasks and a table which displays the list of tasks.
 * Task form is created using Template driven forms which includes data binding and validation.
